@@ -1,0 +1,7 @@
+models:
+  Place:
+    title: string:400
+    content: longtext
+    location: location
+    published_at: nullable timestamp
+

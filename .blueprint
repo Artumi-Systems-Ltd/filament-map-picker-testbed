@@ -1,0 +1,6 @@
+created:
+    - database/factories/PlaceFactory.php
+    - database/migrations/2024_11_24_205107_create_places_table.php
+    - app/Models/Place.php
+models:
+    Place: { title: 'string:400', content: longtext, location: location, published_at: 'nullable timestamp' }
