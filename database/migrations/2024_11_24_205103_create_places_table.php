@@ -13,10 +13,14 @@ return new class extends Migration
     {
         Schema::create('places', function (Blueprint $table) {
             $table->id();
-            $table->string('title', 400);
-            $table->longText('content');
-            $table->string('location');
-            $table->timestamp('published_at')->nullable();
+            $table->string('title', 400)->nullable();
+            $table->string('location')->nullable();
+            $table->float('distance1')->nullable();
+            $table->string('location2')->nullable();
+            $table->string('location3')->nullable();
+            $table->float('distance3')->nullable();
+            $table->string('location4')->nullable();
+            $table->string('location5')->nullable();
             $table->timestamps();
         });
     }

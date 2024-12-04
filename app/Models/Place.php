@@ -16,9 +16,13 @@ class Place extends Model
      */
     protected $fillable = [
         'title',
-        'content',
         'location',
-        'published_at',
+        'distance1',
+        'location2',
+        'location3',
+        'distance3',
+        'location4',
+        'location5',
     ];
 
     /**
@@ -28,6 +32,5 @@ class Place extends Model
      */
     protected $casts = [
         'id' => 'integer',
-        'published_at' => 'timestamp',
     ];
 }

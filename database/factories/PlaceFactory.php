@@ -22,9 +22,6 @@ class PlaceFactory extends Factory
     {
         return [
             'title' => $this->faker->sentence(4),
-            'content' => $this->faker->paragraphs(3, true),
-            'location' => $this->faker->word(),
-            'published_at' => $this->faker->dateTime(),
         ];
     }
 }
