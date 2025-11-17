@@ -2,16 +2,19 @@
 
 namespace App\Livewire;
 
+use Filament\Actions\Contracts\HasActions;
+use Filament\Actions\Concerns\InteractsWithActions;
+use Filament\Schemas\Schema;
 use Filament\Forms\Contracts\HasForms;
 use Filament\Forms\Concerns\InteractsWithForms;
 use Livewire\Component;
-use Filament\Forms\Form;
 use Dotswan\MapPicker\Fields\Map;
 use Filament\Forms\Components\Select;
 use Illuminate\Contracts\View\View;
 
-class FindByLocation extends Component implements HasForms
+class FindByLocation extends Component implements HasForms, HasActions
 {
+    use InteractsWithActions;
     use InteractsWithForms;
 
     public ?array $data = [];
@@ -21,9 +24,9 @@ class FindByLocation extends Component implements HasForms
         $this->form->fill();
     }
 
-    public function form(Form $form): Form
+    public function form(Schema $schema): Schema
     {
-        return $form->schema([
+        return $schema->components([
             Map::make('point_selection')
                 ->label('Point Selection')
                 ->extraStyles([
