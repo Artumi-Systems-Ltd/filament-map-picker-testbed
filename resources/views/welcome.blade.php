@@ -33,6 +33,8 @@
 
                     <p>To see a form working as a Livewire component <a href="/find" class="underline">Go here</a></p>
 
+                    <p>To see a form working as a normal Form without Livewire submission logic <a href="/map-submission" class="underline">Go here</a></p>
+
                     </main>
 
                 </div>

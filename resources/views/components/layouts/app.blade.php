@@ -21,7 +21,7 @@
         }
         </style>
             <!-- Vite CSS -->
-    @vite('resources/css/app.css')
+        @vite(['resources/css/app.css', 'resources/js/app.js'])
 
         @filamentStyles
     </head>

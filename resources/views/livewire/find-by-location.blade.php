@@ -1,10 +1,11 @@
 <div>
-    <form wire:submit="create">
     <p>Tests:</p>
     <ul class="ml-3 list-disc">
     <li>Check that there are no console errors.</li>
     <li>Check that selecting a point and then navigating back and forth maintains that point</li>
     </ul>
+
+    <form wire:submit="create">
 
         {{ $this->form }}
 
