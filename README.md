@@ -18,6 +18,43 @@ It has a single Model "Places" and is tested on sqlite saving lat and lng info a
 Get the version of the map you want in vendor/dotswan/filament-map-picker and `php artisan filament:assets` to get
 the correct assets in place and then test locally.
 
+## Composer.json Setup
+
+I changed composer.json like this for development
+
+```
+index 0038ed4..f55c9b8 100644
+--- i/composer.json
++++ w/composer.json
+@@ -7,7 +7,7 @@
+     "license": "MIT",
+     "require": {
+         "php": "^8.2",
+-        "dotswan/filament-map-picker": "^2.0",
++        "dotswan/filament-map-picker": "dev-master",
+         "filament/filament": "^4.0",
+         "laravel/framework": "^11.31",
+         "laravel/tinker": "^2.9"
+@@ -61,6 +61,17 @@
+             "dont-discover": []
+         }
+     },
++
++ "repositories": [
++        {
++            "name" : "artumi-systems-ltd/filament-map-picker",
++            "type" : "path",
++            "url" : "/home/richard/github.com/Artumi-Systems-Ltd/filament-map-picker/",
++            "options" : {
++            "symlink": true
++            }
++        }
++    ],
+     "config": {
+         "optimize-autoloader": true,
+         "preferred-install": "dist",
+```
+
 ## Test Procedure
 
 - Get the correct version/branch of the filament-map-picker installed. (See "Useful git alias" below)
@@ -58,8 +95,6 @@ the correct assets in place and then test locally.
 
 - Go to create a place.
 - Are all three maps defaulting to different locations?
-
-
 
 ## Useful git alias
 

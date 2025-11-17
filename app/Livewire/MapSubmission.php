@@ -37,7 +37,7 @@ class MapSubmission extends Component implements HasForms, HasActions
                 ->showMarker(true)
                 ->showFullscreenControl(false)
                 ->showZoomControl()
-                ->tilesUrl("https://tile.openstreetmap.de/{z}/{x}/{y}.png")
+                ->tilesUrl("https://tile.openstreetmap.org/{z}/{x}/{y}.png")
                 ->minZoom(7)
                 ->maxZoom(19)
                 ->clickable(true)
@@ -68,4 +68,3 @@ class MapSubmission extends Component implements HasForms, HasActions
         return view('livewire.map-submission');
     }
 }
-

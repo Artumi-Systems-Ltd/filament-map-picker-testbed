@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7967ce84aca7ac6248c49ab89b6fa8f2",
+    "content-hash": "9a965d0a75f801b2caf6c0496436679c",
     "packages": [
         {
             "name": "anourvalar/eloquent-serialize",
@@ -859,17 +859,11 @@
         },
         {
             "name": "dotswan/filament-map-picker",
-            "version": "v2.0.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/dotswan/filament-map-picker.git",
-                "reference": "2039185dc799f065916417e5f1ea669f5683ff91"
-            },
+            "version": "dev-master",
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/dotswan/filament-map-picker/zipball/2039185dc799f065916417e5f1ea669f5683ff91",
-                "reference": "2039185dc799f065916417e5f1ea669f5683ff91",
-                "shasum": ""
+                "type": "path",
+                "url": "/home/richard/github.com/Artumi-Systems-Ltd/filament-map-picker",
+                "reference": "2039185dc799f065916417e5f1ea669f5683ff91"
             },
             "require": {
                 "filament/filament": "^4.0",
@@ -891,12 +885,12 @@
             "type": "library",
             "extra": {
                 "laravel": {
-                    "aliases": {
-                        "MapPicker": "Dotswan\\MapPicker\\Facades\\MapPicker"
-                    },
                     "providers": [
                         "Dotswan\\MapPicker\\MapPickerServiceProvider"
-                    ]
+                    ],
+                    "aliases": {
+                        "MapPicker": "Dotswan\\MapPicker\\Facades\\MapPicker"
+                    }
                 }
             },
             "autoload": {
@@ -905,7 +899,28 @@
                     "Dotswan\\MapPicker\\Database\\Factories\\": "database/factories/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "Dotswan\\MapPicker\\Tests\\": "tests/"
+                }
+            },
+            "scripts": {
+                "post-autoload-dump": [
+                    "@php ./vendor/bin/testbench package:discover --ansi"
+                ],
+                "analyse": [
+                    "vendor/bin/phpstan analyse"
+                ],
+                "test": [
+                    "vendor/bin/pest"
+                ],
+                "test-coverage": [
+                    "vendor/bin/pest --coverage"
+                ],
+                "format": [
+                    "vendor/bin/pint"
+                ]
+            },
             "license": [
                 "MIT"
             ],
@@ -931,7 +946,10 @@
                 "issues": "https://github.com/dotswan/filament-map-picker/issues",
                 "source": "https://github.com/dotswan/filament-map-picker"
             },
-            "time": "2025-10-23T09:35:24+00:00"
+            "transport-options": {
+                "symlink": true,
+                "relative": false
+            }
         },
         {
             "name": "dragonmantank/cron-expression",
@@ -10541,7 +10559,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "dotswan/filament-map-picker": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
