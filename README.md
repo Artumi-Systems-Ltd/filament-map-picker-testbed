@@ -60,10 +60,10 @@ index 0038ed4..f55c9b8 100644
 - Get the correct version/branch of the filament-map-picker installed. (See "Useful git alias" below)
 - cd to that dir
 - npm install
-- npm run dev:scritps
+- npm run dev:scripts - keep this running while developing.
 - cd to project
-- php artisan filament:assets
-- php artisan serve
+- `php artisan filament:assets` - This copies the files into place.
+- composer run dev
 - open browser at the given url from above
 - open dev tools
 - make sure the "disable cache" is turned on

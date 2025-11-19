@@ -36,12 +36,15 @@ class WizardMap extends Component implements HasSchemas
                 Wizard::make([
                     Step::make('Introduction')->schema(
                         [
-                            FilamentView::make('wizard-map.info')
+                            FilamentView::make('wizard-map.info'),
+
                         ]
                     ),
                     Step::make('Map')->schema([
+
                         Select::make('search_distance')
                             ->label('Search distance')
+                            ->belowContent('As this changes, the map should update')
                             ->options([10 => 10, 100 => 100, 1000 => 1000, 10000 => 10000, 100000 => 100000])
                             ->extraInputAttributes(['name' => 'search_distance'])
                             ->required(),

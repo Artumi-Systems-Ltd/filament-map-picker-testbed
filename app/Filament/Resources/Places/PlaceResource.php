@@ -36,7 +36,8 @@ class PlaceResource extends Resource
     {
         return $schema
             ->components([
-                TextInput::make('title'),
+                TextInput::make('title')
+                    ->columnSpanFull(),
                 Group::make(function () {
                     return [
                         Map::make('location')
@@ -128,6 +129,7 @@ class PlaceResource extends Resource
                             ->options([10 => 10, 100 => 100, 1000 => 1000, 10000 => 10000, 100000 => 100000]),
                     ];
                 }),
+
             ]);
     }
 

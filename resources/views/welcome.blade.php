@@ -32,9 +32,11 @@
                     <p></p>
                     <p>Use the standard `php artisan make:filament-user` to add a user, then <a href="/admin/login" class="underline">Login here</a></p>
 
-
                     <p>To see a form working as a Livewire component <a href="/find" class="underline">Go here</a></p>
+
                     <p>To see a Map working on the second page of a Wizard <a href="/wizard-map" class="underline">Go here</a></p>
+
+                    <p>To see a Map working with actions that set the location <a href="/location-actions" class="underline">Go here</a></p>
 
                     <p>To see a form working as a normal Form without Livewire submission logic <a href="/map-submission" class="underline">Go here</a></p>
 
