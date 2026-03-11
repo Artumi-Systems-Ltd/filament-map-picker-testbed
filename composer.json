@@ -62,7 +62,7 @@
         }
     },
 
- "repositories": [
+ "repositories-dev": [
         {
             "name" : "artumi-systems-ltd/filament-map-picker",
             "type" : "path",

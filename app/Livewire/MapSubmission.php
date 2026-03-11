@@ -4,6 +4,7 @@ namespace App\Livewire;
 
 use Filament\Actions\Contracts\HasActions;
 use Filament\Actions\Concerns\InteractsWithActions;
+use Filament\Schemas\Components\Utilities\Set;
 use Filament\Schemas\Schema;
 use Filament\Forms;
 use Filament\Forms\Concerns\InteractsWithForms;
@@ -28,25 +29,12 @@ class MapSubmission extends Component implements HasForms, HasActions
     public function form(Schema $schema): Schema
     {
         return $schema->components([
-            Map::make('point_selection')
-                ->label('Point Selection')
-                ->extraStyles([
-                    'height:50vh',
-                ])
-                ->setBoundsToBritishIsles()
+            Map::make('coordinate')
+                ->label('Location')
                 ->showMarker(true)
-                ->showFullscreenControl(false)
-                ->showZoomControl()
-                ->tilesUrl("https://tile.openstreetmap.org/{z}/{x}/{y}.png")
-                ->minZoom(7)
-                ->maxZoom(19)
-                ->clickable(true)
-                ->detectRetina()
-                ->rangeSelectField('search_distance')
-                ->showMyLocationButton(false)
-                ->drawCircleMarker()
-                ->dragMode(false)
-                ->setFilledColor('#cad9ec'),
+                ->draggable()
+                ->tilesUrl('https://tile.openstreetmap.org/{z}/{x}/{y}.png')
+                ->showMyLocationButton(),
 
             Select::make('search_distance')
                 ->label('Search distance')
