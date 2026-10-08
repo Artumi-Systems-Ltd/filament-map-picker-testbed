@@ -14,4 +14,9 @@ export default defineConfig({
         }),
         tailwindcss(),
     ],
+    server: {
+        watch: {
+            ignored: ['**/vendor/**', '**/storage/**'],
+        },
+    },
 });
